@@ -1,6 +1,6 @@
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
-import { create } from "eslint/lib/rules/*";
+/*import { create } from "eslint/lib/rules/*";
 
 /*When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.*/
 
@@ -94,7 +94,7 @@ Using the reviews array above do the following: (no function needed)
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
-reviews.push({name:Juan, rating: 3, feedback: "not great"})
+reviews.push({name:"Juan", rating: 3, feedback: "not great"})
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
@@ -104,6 +104,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 
 
 reviews[7].feedback = "Poor service"
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -117,8 +118,8 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, index) {
+  return `${array[index].name} gave the restaurant a ${array[index].rating} star review, and their feedback was: ${array[index].feedback}`
 }
 
 
@@ -136,8 +137,8 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  return `${array[array.length-1].name} gave the restaurant a ${array[array.length-1].rating} star review, and their feedback was: ${array[array.length-1].feedback}`
 } 
 
 
