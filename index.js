@@ -18,13 +18,9 @@ The function should:
 */
 
 function createMenuItem(name, price, category){
-    const newItem = {
-      name : name,
-      price : price,
-      category : category,
-    }
-
-    return newItem;
+  let dish = {}
+  dish = {name, price, category}
+  return dish
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -36,13 +32,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}*/
 
-createMenuItem(tamal, 2, mains);
-createMenuItem(taco,2,mains);
-createMenuItem(flan,1.5, desserts);
-
-console.log(tamal);
-
-
+console.log(createMenuItem('tamal', '2', 'mains'));
+console.log(createMenuItem('taco','2','mains'));
+console.log(createMenuItem('flan','1.5', 'desserts'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
@@ -60,9 +52,17 @@ Using the burger object below do the following:
 export const burger = {
   name: "Burger", 
   price: 18, 
-  category: "Lunch", 
-  /*Your code here*/
+  category: "Lunch",
+  discount: function(customer) {
+    if (customer === 'student' || customer === 'teacher'){
+      return this.price*.75
+    } else {
+      return this.price * 0.9
+    }
+  }
 }
+  
+console.log(burger.discount('teacher'))
 
 
 
@@ -82,6 +82,8 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
+
+console.log(reviews[5].feedback)
 
 
 
