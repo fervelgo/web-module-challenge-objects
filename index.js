@@ -1,5 +1,7 @@
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
+import { create } from "eslint/lib/rules/*";
+
 /*When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.*/
 
 ///////////////Menu Items (MVP)///////////////////
@@ -15,8 +17,14 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name, price, category){
+    const newItem = {
+      name : name,
+      price : price,
+      category : category,
+    }
+
+    return newItem;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -26,8 +34,13 @@ Test your createMenuItems function by doing the following:
   2. Create at least 3 menu items (objects) of your choosing making sure they have name, price, and category keys
   3. Log each returned object to the console  
   
-  For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
-*/
+  For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}*/
+
+createMenuItem(tamal, 2, mains);
+createMenuItem(taco,2,mains);
+createMenuItem(flan,1.5, desserts);
+
+console.log(tamal);
 
 
 
